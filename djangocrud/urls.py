@@ -31,10 +31,10 @@ urlpatterns = [
     path('create_task/', views.ProductoForm, name='create_task'),
 
 
-    path('productos/', views.listar_productos, name='listar_productos'),  # Listar productos
-    path('productos/crear/', views.crear_producto, name='crear_producto'),  # Crear producto
-    path('productos/editar/<int:id>/', views.editar_producto, name='editar_producto'),  # Editar producto
-    path('productos/eliminar/<int:id>/', views.eliminar_producto, name='eliminar_producto'),  # Eliminar producto
+    path('productos/', views.listar_productos, name='listar_productos'),  
+    path('productos/crear/', views.crear_producto, name='crear_producto'),  
+    path('productos/editar/<int:id>/', views.editar_producto, name='editar_producto'), 
+    path('productos/eliminar/<int:id>/', views.eliminar_producto, name='eliminar_producto'),  
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     

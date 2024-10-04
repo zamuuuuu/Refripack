@@ -22,28 +22,28 @@ def signup(request):
         print(request.POST)
         print('Obteniendo datos')
 
-        # Instanciar el formulario con los datos enviados
+       
         form = UserCreationForm(request.POST)
 
-        # Verificar que las contraseñas coincidan y que el formulario sea válido
+        
         if form.is_valid():
             try:
-                # Crear el usuario
+                
                 user = User.objects.create_user(
                     username=request.POST["username"], password=request.POST["password1"])
                 user.save()
 
-                # Iniciar sesión automáticamente
+               
                 login(request, user)
-                return redirect('tasks')  # Redirige a la página de tareas o donde prefieras
+                return redirect('tasks')  
             except IntegrityError:
-                # Si el usuario ya existe, muestra el error
+                
                 return render(request, 'signup.html', {
                     "form": form,
                     "error": "El nombre de usuario ya existe."
                 })
 
-        # Si las contraseñas no coinciden o hay otros errores en el formulario
+        
         return render(request, 'signup.html', {
             "form": form,
             "error": "Revisa que todos los campos esten rellenados correctamente."
