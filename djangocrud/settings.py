@@ -79,11 +79,14 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Refripack_Database',
+        'NAME': 'refripack_database',
         'USER': 'root',
         'PASSWORD': '',  # Asegúrate de que la contraseña esté correcta
-        'HOST': 'C:/xampp/mysql/mysql.sock',
+        'HOST': 'localhost',
         'PORT': '3306',
+        'OPTIONS': {
+            'unix_socket': '/ruta/del/socket/mysql.sock',  # Cambia esto a la ubicación del socket
+        },
     }
 }
 
