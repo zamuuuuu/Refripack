@@ -1,0 +1,35 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-orange fixed-top py-3" id="mainNav">
+  <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/REFRIPACK LOGO.png' %}" width="140" height="50" alt=" logo refripack"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto navbar-text"> <!-- Asegúrate de que haya la clase navbar-text aquí -->
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a href="/" class="nav-link">Inicio</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                  <a href="{% url 'listar_productos' %}" class="nav-link">Lista De Productos</a>
+              </li>
+              <li class="nav-item">
+                  <a href="{% url 'crear_producto' %}" class="nav-link">Crear Producto</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/logout">Cerrar Sesion</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a href="/signin" class="nav-link">Iniciar Sesion</a>
+            </li>
+            <li class="nav-item">
+              <a href="/signup" class="nav-link">Registrarse</a>
+          </li>
+              {% endif %}
+          </ul>
+      </div>
+  </div>
+</nav>

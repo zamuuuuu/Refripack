@@ -1,0 +1,171 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>RefriPack</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'icons/logo.ico' %}">
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body id="page-top">
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">REFRIPACK</h1>
+                        <hr class="divider"/>
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Tu lugar favorito para comprar refrigerios</p>
+                        <a class="btn btn-primary btn-xl" href="#services">Mas...</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- background-->
+        <style>
+            header.masthead {
+                padding-top: 10rem;
+                padding-bottom: calc(10rem - 4.5rem);
+                background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("{% static 'img/fondo_p2.jpeg' %}");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: cover;
+              }
+            </style>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Nuestras Ventajas</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi bi-mouse-fill fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Al alcance de un click</h3>
+                            <hr class="divider" />
+                            <p class="text-muted mb-0">Tus snacks favoritos, cuando los necesitas. La pausa perfecta, siempre a mano.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi bi-emoji-wink-fill fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">La mejor eleccion</h3>
+                            <hr class="divider" />
+                            <p class="text-muted mb-0">La mejor selección, directamente a tu puerta. Variedad y calidad garantizadas.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi bi-door-open-fill fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Directo a tu puerta</h3>
+                            <hr class="divider" />
+                            <p class="text-muted mb-0">Personaliza tu refrigerio, nosotros lo llevamos. ¡A tu gusto y a tu puerta!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi bi-heart-fill fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">No hay mejor</h3>
+                            <hr class="divider" />
+                            <p class="text-muted mb-0">Tu despensa a un clic. Todo lo que necesitas, siempre fresco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <h2 style="text-align: center;">Algunos De Nuestro Productos</h2>
+                    <hr class="divider" />
+                    <p></p>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'img/caja_1.jpeg' %}" title="Snack Kit">
+                            <img class="img-fluid" src="{% static 'img/caja_1.jpeg' %}" alt="...">
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Refri</div>
+                                <div class="project-name">Snack Kit</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'img/sandwich.jpeg' %}" title="RefriSandwich">
+                            <img class="img-fluid" src="{% static 'img/sandwich.jpeg' %}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Refri</div>
+                                <div class="project-name">RefriSandwich</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'img/caja_2.jpeg' %}" title="Snack Kit 2">
+                            <img class="img-fluid" src="{% static 'img/caja_2.jpeg' %}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Refri</div>
+                                <div class="project-name">Snack Kit 2</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'img/ensalada.jpeg' %}" title="Ensalada">
+                            <img class="img-fluid" src="{% static 'img/ensalada.jpeg' %}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Salud</div>
+                                <div class="project-name">Ensalada</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'img/caja_3.jpg' %}" title="Snack Kit 3">
+                            <img class="img-fluid" src="{% static 'img/caja_3.jpg' %}" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Refri</div>
+                                <div class="project-name">Snack Kit 3</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'img/refripack_2.jpeg' %}" title="RefriPack">
+                            <img class="img-fluid" src="{% static 'img/refripack_2.jpeg' %}" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Pack</div>
+                                <div class="project-name">RefriPack</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider" /> 
+        <!-- Footer-->
+        <footer class="bg-dark py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-white">Copyright &copy; 2024 - RefriPack</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="container- d-flex justify-content-center align-items-center" style="height: 100vh; background-image: url('{% static 'img/fondo_signup.jpeg' %}'); background-size: cover; background-position: center;">
+<div class= "col-md-4 offset-md-4">
+<h1 class="text secondary" {{task.title}}></h1>
+{{error}}
+
+ 
+  <div>
+    <form method="POST" class="card card-body">
+    {% csrf_token %}
+    {{form.as_p}}
+  
+
+  <button class="btn btn-primary">
+    Update
+  </button>
+
+
+<form action="{% url 'complete_task' task.id %}" method="POST">
+  {% csrf_token %}
+  <button class="btn btn-secondary">
+    complete
+  </button>
+
+
+<form action="{% url 'delete_task' task.id %}" method="POST">
+  {% csrf_token %}
+  <button class="btn btn-danger">
+    delete
+  </button>
+ </form>
+</div>
+{% endblock %}
